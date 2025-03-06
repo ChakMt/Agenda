@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MainFragment" android:id="@+id/frameLayout">
+    <Button
+            android:text="Contactos"
+            android:layout_width="232dp"
+            android:layout_height="58dp" android:id="@+id/BotonContactos"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="172dp" android:layout_marginStart="88dp"/>
+    <Button
+            android:text="Tareas"
+            android:layout_width="232dp"
+            android:layout_height="58dp" android:id="@+id/BotonTareas"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="240dp" android:layout_marginStart="88dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
