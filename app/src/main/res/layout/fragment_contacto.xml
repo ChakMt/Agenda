@@ -31,7 +31,7 @@
             android:id="@+id/tuNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Ximena López"
+            tools:text="Carlos Maldonado"
             app:layout_constraintStart_toEndOf="@id/textViewNombre"
             android:layout_marginStart="8dp"
             app:layout_constraintTop_toTopOf="@id/textViewNombre"/>
