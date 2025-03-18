@@ -47,7 +47,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
        /* val date = SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Date())
-        var tarea : Tarea = Tarea(null, date,"Carlos", "algo", 1)
+        var tarea : Tarea = Tarea(null, date,"Ximena", "algo", 1)
 
 
 

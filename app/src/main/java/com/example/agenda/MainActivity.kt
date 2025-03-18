@@ -1,55 +1,78 @@
 package com.example.agenda
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.agenda.databinding.ActivityMainBinding
+import com.example.agenda.ui.login.LoginActivity
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),OnNavigationItemSelectedListener {
+
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navDrawer:DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
+        navDrawer = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-        setSupportActionBar(binding.toolbar)
+        val navigationView = findViewById<NavigationView>(R.id.nav_view)
+        navigationView.setNavigationItemSelectedListener(this)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        val toggle = ActionBarDrawerToggle(this,navDrawer,toolbar,
+            R.string.app_name, R.string.app_name)
 
+        navDrawer.addDrawerListener(toggle)
+        toggle.syncState()
 
-    }
+        if (savedInstanceState == null){
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                FirstFragment()).commit()
+            navigationView.setCheckedItem(R.id.nav_home)
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
         }
+
+
+
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+
+
+    override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+        when (p0.itemId){
+            R.id.nav_home-> {
+                /*supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                MainFragment()).commit()
+                }
+                 */
+                intent = Intent(this, LoginActivity::class.java)
+                intent.putExtra("variable","valor")
+                startActivity(intent)
+                finish()
+            }
+            R.id.nav_tarea->{supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                FirstFragment()).commit()}
+            R.id.nav_contacto->{supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                ContactoFragment()).commit()}
+
+        }
+        navDrawer.closeDrawer(navDrawer)
+
+        return true
+
+        }
+
     }
-}

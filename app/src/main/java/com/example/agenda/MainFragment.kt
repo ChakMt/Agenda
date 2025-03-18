@@ -41,7 +41,7 @@ class MainFragment : Fragment() {
         }
 
         binding.BotonContactos.setOnClickListener{
-            findNavController().navigate(R.id.action_mainFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_mainFragment_to_contactosFragment)
         }
 
     }

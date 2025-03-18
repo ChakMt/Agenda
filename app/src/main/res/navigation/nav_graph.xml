@@ -20,12 +20,12 @@
         <action android:id="@+id/action_SecondFragment_to_FirstFragment" app:destination="@id/FirstFragment"/>
     </fragment>
     <fragment android:id="@+id/mainFragment" android:name="com.example.agenda.MainFragment"
-              android:label="fragment_main" tools:layout="@layout/fragment_main">
+              android:label="@string/list_contactos" tools:layout="@layout/fragment_main">
         <action android:id="@+id/action_mainFragment_to_SecondFragment" app:destination="@id/SecondFragment"/>
         <action android:id="@+id/action_mainFragment_to_contactosFragment" app:destination="@id/contactosFragment"/>
     </fragment>
-    <fragment android:id="@+id/contactosFragment" android:name="com.example.agenda.ContactosFragment"
-              android:label="fragment_contactos" tools:layout="@layout/fragment_contactos">
+    <fragment android:id="@+id/contactosFragment" android:name="com.example.agenda.ContactoFragment"
+              android:label="fragment_contactos" tools:layout="@layout/fragment_contacto">
         <action android:id="@+id/action_contactosFragment_to_mainFragment" app:destination="@id/mainFragment"/>
     </fragment>
 </navigation>
