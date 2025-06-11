@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:id="@+id/frameLayout2"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".ContactoFragment" android:background="@color/white">
+
+    <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre(s)"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:textColor="@color/black"
+            android:textColorLink="@color/black" android:backgroundTint="@color/black"/>
+
+    <EditText
+            android:id="@+id/nombreContacto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" android:textColor="@color/black" android:textColorLink="@color/black"
+            android:backgroundTint="@color/black"/>
+
+    <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido Materno"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/nombreContacto"
+            app:layout_constraintStart_toStartOf="parent" android:textColor="@color/black"
+            android:textColorLink="@color/black" android:backgroundTint="@color/black"/>
+
+    <EditText
+            android:id="@+id/apellidoMaContacto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:textColor="@color/black"
+            android:textColorLink="@color/black" android:backgroundTint="@color/black"/>
+
+    <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido Paterno"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/apellidoMaContacto"
+            app:layout_constraintStart_toStartOf="parent" android:textColor="@color/black"
+            android:textColorLink="@color/black" android:backgroundTint="@color/black"/>
+
+    <EditText
+            android:id="@+id/apellidoPaContacto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:textColor="@color/black"
+            android:textColorLink="@color/black" android:backgroundTint="@color/black"/>
+
+
+    <LinearLayout
+            android:id="@+id/correoAdicionalContacto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="380dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/apellidoPaContacto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:id="@+id/btnAgregarCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar correo"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/correoAdicionalContacto"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+            android:id="@+id/buttonGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="152dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnAgregarCorreo"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="Telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/apellidoPaContacto" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:textColor="@color/black" android:textColorLink="@color/black"
+            android:backgroundTint="@color/black"/>
+    <EditText
+            android:layout_width="375dp"
+            android:layout_height="46dp"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/telefonoContacto"
+            android:layout_marginTop="1dp" app:layout_constraintTop_toBottomOf="@+id/textView15"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:textColor="@color/black" android:textColorLink="@color/black"
+            android:backgroundTint="@color/black"/>
+    <TextView
+            android:text="Correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/telefonoContacto" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginTop="8dp" android:textColor="@color/black"
+            android:textColorLink="@color/black" android:backgroundTint="@color/black"/>
+    <EditText
+            android:layout_width="375dp"
+            android:layout_height="41dp"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/correoContacto" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:textColor="@color/black" android:textColorLink="@color/black"
+            android:backgroundTint="@color/black"/>
+    <TextView
+            android:text="Direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView7"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/correoContacto" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="13dp" android:textColor="@color/black" android:textColorLink="@color/black"
+            android:backgroundTint="@color/black"/>
+    <EditText
+            android:layout_width="374dp"
+            android:layout_height="40dp"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/direccionContacto" android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:textColor="@color/black" android:textColorLink="@color/black"
+            android:backgroundTint="@color/black"/>
+    <TextView
+            android:text="Telefono Adicional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView9"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/direccionContacto" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="13dp" android:textColor="@color/black" android:textColorLink="@color/black"
+            android:backgroundTint="@color/black"/>
+    <EditText
+            android:layout_width="378dp"
+            android:layout_height="36dp"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/telefonoAdicionalContacto"
+            android:layout_marginTop="13dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:textColor="@color/black" android:textColorLink="@color/black"
+            android:backgroundTint="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

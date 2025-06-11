@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FirstFragment" android:id="@+id/NestedScrollView" android:backgroundTint="#FDFDFD"
+        android:background="#FBF9F9">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="Nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView" android:textColor="#101010"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/nombre"/>
+        <TextView
+                android:text="Prioridad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView2" android:textColor="#121212"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/prioridad"/>
+        <TextView
+                android:text="Descripción"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView3" android:textColorLink="#050505"
+                android:textColor="#090909"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/descripcion"/>
+        <Button
+                android:text="Aceptar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/aceptar" android:backgroundTint="#3F51B5"
+                android:textColor="#090909"/>
+        <Button
+                android:text="Ver Todos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/verTodos" android:backgroundTint="#3F51B5"
+                android:textColor="#050505"/>
+        <Button
+                android:text="Agregar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_add" android:textColorLink="#3F51B5"
+                android:backgroundTint="#3F51B5" android:textColor="#090909"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

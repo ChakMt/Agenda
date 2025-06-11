@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".RegistrarseFragment">
+
+    <EditText
+            android:id="@+id/nombre"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:hint="@string/nombrePersona"
+            android:inputType="text"
+            android:selectAllOnFocus="true"/>
+    <EditText
+            android:id="@+id/apellidoMaterno"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:hint="@string/apellidoMaterno"
+            android:inputType="text"
+            android:selectAllOnFocus="true"/>
+    <EditText
+            android:id="@+id/apellidoPaterno"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:hint="@string/apellidoPaterno"
+            android:inputType="text"
+            android:selectAllOnFocus="true"/>
+    <EditText
+            android:id="@+id/email"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:hint="@string/prompt_email"
+            android:inputType="text"
+            android:selectAllOnFocus="true"/>
+    <EditText
+            android:id="@+id/password"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:hint="@string/prompt_password"
+            android:inputType="text"
+            android:selectAllOnFocus="true"/>
+    <Button
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="470dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/btn_aceptar"
+            android:id="@+id/btn_aceptar"
+            android:textColorLink="#3F51B5"/>
+
+</FrameLayout>

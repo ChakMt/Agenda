@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/mainFragment">
+
+    <fragment
+            android:id="@+id/FirstFragment"
+            android:name="com.example.agenda.FirstFragment"
+            android:label="@string/first_fragment_label"
+            tools:layout="@layout/fragment_first">
+        <action android:id="@+id/action_FirstFragment_to_SecondFragment" app:destination="@id/SecondFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/SecondFragment"
+            android:name="com.example.agenda.SecondFragment"
+            android:label="@string/second_fragment_label"
+            tools:layout="@layout/fragment_second">
+        <action android:id="@+id/action_SecondFragment_to_FirstFragment" app:destination="@id/FirstFragment"/>
+    </fragment>
+    <fragment android:id="@+id/mainFragment" android:name="com.example.agenda.MainFragment"
+              android:label="@string/list_contactos" tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_mainFragment_to_SecondFragment" app:destination="@id/SecondFragment"/>
+        <action android:id="@+id/action_mainFragment_to_contactosFragment" app:destination="@id/contactosFragment"/>
+    </fragment>
+    <fragment android:id="@+id/contactosFragment" android:name="com.example.agenda.Contactos"
+              android:label="fragment_contactos" tools:layout="@layout/fragment_contactos">
+        <action android:id="@+id/action_contactosFragment_to_mainFragment" app:destination="@id/mainFragment"/>
+    </fragment>
+</navigation>
